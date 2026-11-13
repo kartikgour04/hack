@@ -1,0 +1,18 @@
+{
+  "name": "group-travel-matcher",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Match solo travellers into group trips, then plan and split a hotel booking together.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "setup": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "start": "concurrently --kill-others-on-fail --names api,web --prefix-colors blue,magenta \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "reset": "npm run reset --prefix backend",
+    "test": "npm test --prefix backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
